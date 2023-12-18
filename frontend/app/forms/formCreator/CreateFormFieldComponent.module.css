@@ -1,0 +1,31 @@
+.container {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+
+	gap: 20px;
+	border: var(--border-size) solid var(--color-input-border);
+	border-radius: var(--border-radius);
+
+}
+
+.topRow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fieldFormat {
+	gap: 5px;
+}
+
+.optionRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.invalid {
+    border: 1px solid red;
+}

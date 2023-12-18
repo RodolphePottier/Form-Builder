@@ -1,0 +1,20 @@
+
+.test {
+
+	background: var(--input-background);
+	width: 100%;
+	border: var(--border-size) solid var(--color-input-border);
+	border-radius: var(--border-radius);
+	padding: 20px;
+}
+
+.container {
+	background: var(--input-background);
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.mySelectStyle {
+	border: none;
+}

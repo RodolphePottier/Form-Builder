@@ -1,0 +1,25 @@
+.centeredContainer {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+.container {
+
+	background: var(--color-background);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 770px;
+	gap: 20px;
+
+	border-radius: var(--border-radius);
+	border: var(--border-size) solid var(--color-input-border);
+
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}

@@ -1,0 +1,35 @@
+.centeredContainer {
+
+	display: flex;
+	justify-content: center;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.container {
+
+	background: var(--color-background);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 770px;
+	gap: 20px;
+
+	border-radius: var(--border-radius);
+
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.warning {
+
+	padding: 20px;
+	width: 100%;
+	background: rgb(234, 149, 149);
+	border-radius: var(--border-radius);
+}

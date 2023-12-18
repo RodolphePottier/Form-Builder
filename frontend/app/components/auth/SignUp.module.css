@@ -1,0 +1,21 @@
+.container {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	border-radius: var(--border-radius);
+	border: var(--border-size) solid var(--color-input-border);
+
+	width: 60%;
+}
+
+.fields {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.whiteBackground {
+	background-color: white;
+}
