@@ -58,7 +58,7 @@ You should see the Docker version displayed on the screen, confirming that Docke
 ## Getting Started
 Instructions on how to get a copy of this project up and running on your local machine.
 
-**Configuration**
+## **Configuration**
 Explain any project-specific configurations that users need to set up. Include information on environment variables, configuration files, or any other settings that are required.
 
 **Creating the .env File**
