@@ -71,6 +71,7 @@ Here is an example of a working .env file for quickly running the application:
 
 API_PORT='3001'
 FRONTEND_PORT='8080'
+POSTGRES_PORT='5432'
 
 API_URL=http://localhost:3001
 FRONTEND_URL=http://localhost:8080
@@ -82,10 +83,10 @@ FRONTEND_URL=http://localhost:8080
 POSTGRES_HOST=postgres
 
 POSTGRES_USER=postgres
-POSTGRES_PASSWORD=D#9fGt$K@1qP
+POSTGRES_PASSWORD=D9fGtK1qP2ds
 POSTGRES_DB=postgresdb
 
-JWT_SECRET="S&5pRz@Y7LmW"
+JWT_SECRET="S5pRzY7LmW"
 ```
 **Running the Project**
 

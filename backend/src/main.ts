@@ -22,9 +22,6 @@ async function bootstrap() {
 	const logger = new Logger('bootstrap');
 
 	const orm = await MikroORM.init(mikroOrmConfig);
-	const migrator = orm.getMigrator();
-	await migrator.createMigration();
-	await migrator.up();
 
 	try {
 		app.use(cookieParser());
