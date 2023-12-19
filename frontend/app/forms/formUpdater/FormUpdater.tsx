@@ -197,7 +197,6 @@ const FormUpdater: React.FC<FormUpdaterProps> = ({ formData, onFormDelete }) => 
 				</div>
 			))}
 			<div className={styles.buttons}>
-
 				<Button variant="contained" color="primary" onClick={addFormField}>Add Field</Button>
 				<Button variant="contained" color="primary" onClick={handleSubmit}>Submit Form</Button>
 				<Button variant="contained" onClick={handleDeleteButtonClick} style={{ backgroundColor: 'red', color: 'white' }}>Delete Form</Button>

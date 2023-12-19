@@ -45,7 +45,6 @@ const CreateFormFieldComponent: React.FC<CreateFormFieldComponentProps> = ({
 		updateField({ ...fieldDetails, fieldOptions: updatedOptions });
 	};
 
-
 	const removeFieldOption = (index: number) => {
 		const updatedOptions = fieldDetails.fieldOptions.filter((_, idx) => idx !== index);
 		updateField({ ...fieldDetails, fieldOptions: updatedOptions });

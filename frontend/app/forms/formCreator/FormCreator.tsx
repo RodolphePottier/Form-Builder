@@ -81,11 +81,9 @@ const FormCreator = () => {
 
 		if (formFields.length === 0 || formNameError || formDescriptionError || invalidFieldIndices.size > 0) {
 			displayValidationErrors(formNameError, formDescriptionError, invalidFields, formFields, showAlert);
-
 			return;
 		}
 		displayValidationErrors(formNameError, formDescriptionError, invalidFields, formFields, showAlert);
-
 
 		const payload = { formName, formDescription, fields: formFields };
 
