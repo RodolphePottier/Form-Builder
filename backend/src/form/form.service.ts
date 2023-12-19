@@ -262,7 +262,6 @@ export class FormService {
 	}
 
 	async submitForm(createResponseDto: CreateResponseDto): Promise<FormResponse> {
-		this.logger.log(createResponseDto.formId);
 		const form = await this.em.findOne(Form, { id: createResponseDto.formId });
 		if (!form) {
 			throw new NotFoundException(`Form with id '${createResponseDto.formId}' not found`);
