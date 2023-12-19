@@ -67,7 +67,7 @@ const SignUp = () => {
 		}
 
 		try {
-			const { confirmPassword, ...dataToSend } = formData;
+			const { ...dataToSend } = formData;
 			const apiUrl = process.env.API_URL || 'http://localhost:3001';
 			const response = await fetch(`${apiUrl}/auth/signup`, {
 				method: 'POST',

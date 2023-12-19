@@ -1,5 +1,11 @@
 import styles from './FormResponsesReview.module.css';
-import { Form, FormResponse } from '@/app/types/interfaces';
+import { FieldResponse, Form, FormField, FormResponse } from '@/app/types/interfaces';
+
+interface FormResponsesReviewProps {
+	form: Form;
+	responses: FormResponse[];
+	selectedResponseIndex: number;
+}
 
 interface FormResponsesReviewProps {
 	form: Form;
@@ -8,27 +14,26 @@ interface FormResponsesReviewProps {
 }
 
 const FormResponsesReview: React.FC<FormResponsesReviewProps> = ({ form, responses, selectedResponseIndex }) => {
+	const renderFieldElement = (field: FormField, responseForField: FieldResponse | undefined) => (
+		<div key={field.id} className={styles.fieldElement}>
+			<p><strong>{field.fieldName}:</strong></p>
+			<p> {responseForField ? responseForField.responseValue : 'No response'}</p>
+		</div>
+	);
 
 	const renderResponse = () => {
-		if (responses.length === 0) {
-			return <div className={styles.noResponse}>No responses available for this form.</div>;
-		}
 		const response = responses[selectedResponseIndex];
-		if (!response) {
-			return <div className={styles.noResponse}>No response selected or available.</div>;
-		}
 
-		return form.fields.map(field => {
-			const fieldResponse = response.fieldResponses.find(fr => fr.formField === field.id);
-			const responseValue = fieldResponse ? fieldResponse.responseValue : 'No response';
-
-			return (
-				<div key={field.id} className={styles.fieldElement}>
-					<p><strong>{field.fieldName}:</strong></p>
-					<p> {responseValue}</p>
-				</div>
-			);
-		});
+		return response ? (
+			form.fields.map((field: FormField) => {
+				const responseForField = response.fieldResponses.find(fr => fr.formField === field.id);
+				return renderFieldElement(field, responseForField);
+			})
+		) : (
+			<div className={styles.noResponse}>
+				{responses.length === 0 ? "No responses available for this form." : "No response selected or available."}
+			</div>
+		);
 	};
 
 	return (

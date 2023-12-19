@@ -25,6 +25,7 @@
 }
 
 .fieldElement {
+
 	background-color: white;
 	display: flex;
 	flex-direction: column;
@@ -34,4 +35,9 @@
 	padding: 20px;
 	border: var(--border-size) solid var(--color-input-border);
 	border-radius: var(--border-radius);
+}
+
+.noResponse {
+
+	text-align: center;
 }
