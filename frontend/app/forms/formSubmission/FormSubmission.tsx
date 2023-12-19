@@ -81,8 +81,6 @@ const FormSubmission: React.FC<FormSubmissionProps> = ({ form }) => {
 		} else {
 			showAlert('Failed to submit the form. Please try again.', 'error');
 		}
-
-		console.log('Soumission du formulaire:', JSON.stringify(requestPayload));
 	};
 
 	const renderField = useCallback((field: FormField) => {

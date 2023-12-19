@@ -84,8 +84,6 @@ const FormCreator = () => {
 
 			return;
 		}
-		console.log("formNameError");
-		console.log(formNameError);
 		displayValidationErrors(formNameError, formDescriptionError, invalidFields, formFields, showAlert);
 
 

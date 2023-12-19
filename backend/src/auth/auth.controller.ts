@@ -15,14 +15,12 @@ export class AuthController {
 
 	@Post('/signin')
 	async signIn(@Body() loginDto: LoginDto, @Res() response: Response) {
-		console.log("SIGNIN")
 		const result = await this.authService.signIn(loginDto.username, loginDto.password, response);
 		return response.json(result);
 	}
 
 	@Post('/signup')
 	async signUp(@Body() createUserDto: CreateUserDto, @Res() response: Response) {
-		console.log("SIGNUP")
 		const user = await this.authService.signUpAndSignIn(createUserDto.username, createUserDto.password, response)
 		return response.json(user);
 	}
@@ -31,7 +29,6 @@ export class AuthController {
 	@UseGuards(JwtAuthGuard)
 	@HttpCode(HttpStatus.OK)
 	verifyToken() {
-		console.log("VERIFY TOKEN")
 		return true;
 	}
 }
