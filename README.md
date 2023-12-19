@@ -1,5 +1,5 @@
 
-# Rpottier Form
+# Form Builder
 
 Custom Form Builder and Response Viewer
 This project is a web application built with Next.js and Nest.js, designed to provide a user-friendly solution for creating customized forms. Users can effortlessly design their own forms to gather specific data, and the platform allows them to both respond to these forms and view responses. Additionally, the application provides the capability to modify existing forms, providing flexibility and control in data collection processes.
