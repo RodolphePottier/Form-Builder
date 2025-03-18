@@ -1,4 +1,4 @@
-FROM node:18.17.0
+FROM node:22.9.0
 
 RUN apt-get update && apt-get install -y postgresql-client
 RUN npm install -g npm@latest
